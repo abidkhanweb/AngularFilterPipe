@@ -1,0 +1,49 @@
+<div class="container" id="filter">
+    <div class="row top-filter">
+        <div class="col-md-7 text-left text-left">
+            <input class="form-control" autofocus placeholder="Search" [(ngModel)]="term" (mouseenter)="getAllGender(genderCount)">
+        </div>
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-3">
+                    <span class="bg-secondary result-count">{{getAllGender(genderCount)}}</span>
+                </div>
+                <div class="col-md-9">
+<<<<<<< HEAD
+                    <child-selector [totalGender]="totalGenders"></child-selector>
+=======
+                    <child-selector [totalGender]="totalGenders" (change)="genderCount(count)"></child-selector>
+>>>>>>> Changes for Input Directive
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary pull-right form-control" (click)="refreshData()">
+                <i class="fa fa-refresh"></i>
+                Refresh List</button>
+        </div>
+    </div>
+    <table class="table table-striped user-data">
+        <tr class="row">
+            <th class="col-md-2">User ID</th>
+            <th class="col-md-2">Reference ID</th>
+            <th class="col-md-2">Name</th>
+            <th class="col-md-2">Address</th>
+            <th class="col-md-2">Gender</th>
+            <th class="col-md-2">Action</th>
+        </tr>
+        <tr *ngFor="let user of users | filter:term; let i = index" class="row">
+            <td class="col-md-2">{{user.userId}}</td>
+            <td class="col-md-2">{{i}}</td>
+            <td class="col-md-2">{{user.name | tag:user.gender}}</td>
+            <td class="col-md-2">{{user.address}}</td>
+            <td class="col-md-2">{{user.gender}}</td>
+            <td class="col-md-2"><button class="btn btn-danger" (click)="deleteUserData(user.name)"><i class="fa fa-trash"></i></button></td>
+        </tr>
+    </table>
+
+
+
+
+
+</div>
