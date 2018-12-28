@@ -1,9 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { UserService } from './service/user.service';
-import {  
-    FormGroup,  
-    FormControl  
-} from '@angular/forms'  
 
 @Component({
     selector: 'my-app',
@@ -37,16 +33,12 @@ export class AppComponent implements OnInit {
     }
 
     
-<<<<<<< HEAD
-
-
 
     totalGenders:any = ["All","Male","Female"];
 
     
 
     
-=======
     counterHandler(counter){
         return 7;
         // if(this.totalGender[0]=="All"){
@@ -58,9 +50,7 @@ export class AppComponent implements OnInit {
     }
 
 
-    totalGenders:any = ["All","Male","Female"];
 
->>>>>>> Changes for Input Directive
     // User counter
     getAllGender(genderCount:any,allGender:any) {
         // Called user data

@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-import { Component,Input } from '@angular/core';
-=======
 import { Component,Input, OnInit, Output, EventEmitter } from '@angular/core';
->>>>>>> Changes for Input Directive
 
 @Component({
     selector: 'child-selector',
     templateUrl: './app/child.component.html'
 })
 
-<<<<<<< HEAD
 export class ChildComponent {
     @Input() totalGender:any;
     @Input() gender:any;
@@ -24,9 +19,6 @@ export class ChildComponent {
     //         return false;
     //     }
     // }
-=======
-export class ChildComponent implements OnInit {
-    @Input() totalGender:any;
    // @Input() gender:any;
     navSelected:any;
 
@@ -39,5 +31,4 @@ export class ChildComponent implements OnInit {
         this.counterGender.emit(counter);
     }
 
->>>>>>> Changes for Input Directive
 }
